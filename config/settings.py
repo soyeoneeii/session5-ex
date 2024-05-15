@@ -76,10 +76,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'poll-db',
+        'USER': 'soyeon',
+        'PASSWORD': 'mutsa12!',
+        'HOST': 'mutsa-test-db.c7aaqiuise81.ap-northeast-2.rds.amazonaws.com',
+        'PORT':'3306'
+
     }
 }
 
